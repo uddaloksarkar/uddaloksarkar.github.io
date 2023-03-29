@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<head>
+  <title>Uddalok Sarkar</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.6.6/dist/terminal.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="terminal index">
+  <div class="container">
+    <div class="terminal-nav">
+      <header class="terminal-logo">
+        <div class="logo terminal-prompt"><a href="/">Uddalok Sarkar</a></div>
+      </header>
+      <nav class="terminal-menu">
+        <ul>
+          <li><button id="about" class="button blue">About</button></li>
+          <li><button id="pub" class="button green">Research</button></li>
+          <li><button id="exp" class="button orange">Experience</button></li>
+          <li><button id="other" class="button fuchsia">Other</button></li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="me about show">
+
+      <div class="row">
+        <div class="column">
+          <div class="img-frame" style="margin-bottom: 1cm;">
+            <img id="propic" src="profile.jpg" alt="My memoji avatar" class="profile" />
+          </div>
+          <div style="margin-left: 0.3cm;">
+            <nav class="social-nav">
+              <a style="margin-right: 20px;" href="mailto:uddaloksarkar@gmail.com" aria-label="Gmail"
+                class="menu-item"><svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 1000 1000">
+                  <path
+                    d="M56.4,170.9c7.7-2.9,15.9-4.6,24.6-4.6h838c8.7,0,16.9,1.8,24.6,4.6L568.2,524.6c-38.2,36-98.1,36-136.3,0L56.4,170.9z M979.5,799.4c6.5-10.7,10.5-23.2,10.5-36.6V237.2c0-9.5-1.9-18.6-5.4-26.9l-351.4,331L979.5,799.4z M601.5,570.7c-29.2,25-65.3,37.7-101.5,37.7s-72.4-12.7-101.5-37.7L53.2,828.1c8.6,3.6,17.9,5.7,27.8,5.7h838c9.9,0,19.2-2,27.8-5.7L601.5,570.7z M15.4,210.3c-3.4,8.3-5.4,17.4-5.4,26.9v525.5c0,13.5,4,25.9,10.5,36.6l346.3-258.1L15.4,210.3z" />
+                </svg></a>
+              <a style="margin-right: 20px;" href="https://github.com/uddaloksarkar" class="menu-item"
+                aria-label="GitHub"><svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 496 512">
+                  <path
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                </svg></a>
+              <a style="margin-right: 20px;" href="https://www.linkedin.com/in/uddalok-sarkar/" class="menu-item"
+                aria-label="LinkedIn"><svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512">
+                  <path
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                </svg></a>
+            </nav>
+          </div>
+          <div style="margin-top: 1cm;">
+            <strong>Collaborators:</strong>
+            <ul>
+              <li> <a href="https://www.isical.ac.in/~sourav">Sourav Chakraborty</a></li>
+              <li><a href="https://www.isical.ac.in/~ansuman">Ansuman Banerjee</a></li>
+              <li><a href="https://www.comp.nus.edu.sg/~meel/">Kuldeep S. Meel</a></li>
+              <li><a href="https://sites.google.com/view/sayantans/home">Sayantan Sen</a></li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="column">
+          <p>
+            Hi! I'm a 1st year PhD student of Computer Science at <a href="https://www.isical.ac.in/">Indian Statistical
+              Institute</a>. <br>
+            My current research focus broadly includes verification of probabilistic systems.
+          </p>
+          <div class="terminal-timeline">
+            <div class="terminal-card">
+              <header>2022 onwards </header>
+              <div>
+                <h5 class="terminal-prompt" style="margin-bottom: 0cm;">PhD in Computer Science</h5>
+                Indian Statistical Institute
+              </div>
+            </div>
+            <div class="terminal-card">
+              <header>2020 - 2022</header>
+              <div>
+                <h5 class="terminal-prompt" style="margin-bottom: 0cm;">Masters in Computer Science</h5>
+                Indian Statistical Institute
+              </div>
+            </div>
+            <div class="terminal-card">
+              <header>2015 - 2019</header>
+              <div>
+                <h5 class="terminal-prompt" style="margin-bottom: 0cm;">Bachelors in Electrical Engg</h5> 
+                Jadavpur University
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div>
+        <p class="terminal-prompt"><strong>News</strong></p>
+        <ul>
+          <li>
+            <strong>[02-02-2023]</strong> Currently visiting <a href="https://meelgroup.github.io/">Meelgroup</a> at NUS, Singapore.
+          </li>
+          <li>
+            <strong>[20-01-2023]</strong> Our Paper titled "Testing of Horn Sampler" got accepted in <a href="https://aistats.org/aistats2023/index.html">AISTAT-2023</a>.
+          </li>
+          <li>
+            <strong>[01-08-2022]</strong> Joined <a href="isical.ac.in">Indian Statistical Institute</a> as a Junior Research Fellow.
+          </li>
+        </ul>
+      </div>
+  </div>
+
+
+    <div class="container">
+      <div class="me pub">
+        <p><strong>Publications</strong>:
+        <ul>
+          <li>[AISTAT 2023] "Testing of Horn Sampler" with 
+              <a href="https://www.isical.ac.in/~sourav/">Sourav Chakraborty</a>,
+              <a href="https://www.isical.ac.in/~ansuman/">Ansuman Banerjee</a>,
+              <a href="https://sites.google.com/view/sayantans/home">Sayantan Sen</a>,
+              <a href="">Shayak Chakraborty</a>,
+              <a href="https://www.comp.nus.edu.sg/~meel/">Kuldeep S. Meel</a>
+          </li>
+        </ul>
+        </p>
+        <p><strong>Thesis</strong>:
+          <ul>
+          <li> Masters' Thesis on Testing of Horn Sampler.
+              (<a href="Uddalok_Thesis.pdf">Thesis</a>,
+              <a href="Horn_Sampler_Thesis_Talk.pdf">Slides</a>)
+          </li>
+        </ul>
+        </p>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="me exp">
+        You can find my CV <a href="CV.pdf"> here </a>.
+
+        <!-- <p><strong>Awards/Fellowships</strong>:
+        <ul>
+          <li>TCS Research Grant for Masters' Thesis.</li>
+          <li>Institute Fellowship for Postgraduate Studies at Chennai Mathematical Institute.</li>
+        </ul>
+        </p>
+        <p><strong>Experience</strong>:
+        <ul>
+          <li> Teaching Assistant for courses Data Mining and Machine Learning, Model Checking and Software
+            Verification, both at CMI.</li>
+        </ul>
+        </p>
+      </div> -->
+
+      <div class="container">
+
+        <div class="me other">
+          <!-- <p>
+            I have a personal site, which I do not maintain, you can find it <a
+              href="https://harrison01.github.io/">here</a>.
+          </p> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script async type="text/javascript"
+      src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=19343320"></script>
+</body>
+<footer>
+  <p>
+    Style credits go to <a href="https://terminalcss.xyz">terminal theme</a>.
+  </p>
+</footer>
+
+</html>
