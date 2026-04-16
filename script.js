@@ -1,3 +1,17 @@
-let colors=['#24d05a','#eb4888','#10a2f5','#e9bc3f'];(function(){myFunction();})();function myFunction(){Array.from(document.getElementsByTagName('button')).forEach(e=>{e.addEventListener('click',buttonToggle);});}
-function buttonToggle(e){let buttonType=e.target;off(buttonType);document.getElementsByClassName(buttonType.id)[0].classList.add('show');}
-function off(buttonType){Array.from(document.getElementsByClassName('me')).forEach(e=>{e.classList.remove('show');});}
+(function () {
+  var buttons = document.querySelectorAll('.terminal-menu button[id]');
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      // Hide all sections
+      document.querySelectorAll('.me').forEach(function (el) {
+        el.classList.remove('show');
+      });
+      // Show matching section
+      var target = document.querySelector('.me.' + this.id);
+      if (target) target.classList.add('show');
+      // Update active button
+      buttons.forEach(function (b) { b.classList.remove('active'); });
+      this.classList.add('active');
+    });
+  });
+})();
