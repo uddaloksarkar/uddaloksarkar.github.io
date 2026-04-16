@@ -13,6 +13,16 @@ html, body {
   padding: 0;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Prevent long strings from breaking layout on mobile */
+.container, .me, .pub-title, .pub-authors, .news-list li {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
 body, button {
   background: #fff;
   color: #000;
@@ -111,8 +121,8 @@ body, button {
   flex-wrap: wrap;
 }
 .social-link svg {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   fill: #aaa;
   transition: fill 0.15s;
   display: block;
@@ -338,4 +348,28 @@ footer {
     width: 100%;
   }
   .wordcloud-wrap { max-width: 260px; }
+  /* No justify on narrow screens — creates ugly gaps */
+  .about-bio p { text-align: left; }
+}
+
+@media screen and (max-width: 480px) {
+  /* Stack nav title + buttons on very small screens */
+  .terminal-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .terminal-menu ul {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  /* Bigger touch targets for publication links */
+  .pub-link {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+  /* Slightly larger base font for readability */
+  .pub-title  { font-size: 14px; }
+  .pub-authors { font-size: 13px; }
+  .news-list li { font-size: 13px; }
 }
